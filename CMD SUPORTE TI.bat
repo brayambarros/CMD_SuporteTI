@@ -88,6 +88,9 @@ icacls C:\windows\temp\ /grant administradores:F /T /C
 rmdir /q /s c:\windows\temp\
 md c:\windows\temp\
 
+Este comando irá remover a pasta Windows.old, que contém os arquivos antigos do sistema após uma atualização do Windows.
+rd /s /q %systemdrive%\Windows.old
+
 REM Apaga os arquivos Prefetch
 takeown /A /R /D Y /F C:\Windows\Prefetch\
 icacls C:\Windows\Prefetch\ /grant administradores:F /T /C
